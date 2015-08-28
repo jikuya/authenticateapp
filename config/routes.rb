@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'top#index'
   get 'signup', to: 'users#new'
   resources :users, only: [:create]
+  get 'signin', to: 'sessions#new'
+  resources :sessions, only: [:create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
