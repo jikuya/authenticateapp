@@ -1,5 +1,6 @@
 <%= link_to 'ユーザーを登録する', signup_path %>
 <%= link_to 'ログインする', signin_path %>
+<%= link_to 'ログアウトする', signout_path, method: :delete  %>
 <% if current_user %>
   <p><%= current_user.email %></p>
 <% end %>
